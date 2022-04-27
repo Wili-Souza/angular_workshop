@@ -22,7 +22,6 @@ import { EditComponent } from './pages/edit/edit.component';
     AppRoutingModule,
     SharedModule,
     HttpClientModule,
-    FormsModule,
     ReactiveFormsModule
   ],
   providers: [],
