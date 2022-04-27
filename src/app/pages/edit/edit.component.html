@@ -1,0 +1,57 @@
+<div class="new">
+    <div class="form-container">
+        <form class="form" [formGroup]="itemForm" (ngSubmit)="saveCar()">
+
+            <h3 class="title center">
+                Adicione um novo carro:
+            </h3>
+            
+            <span *ngIf="showErrorMessage" class="error-message"> Todos os campos são obrigatórios! </span>
+
+            <div class="field-container">
+                <label for="brand">Marca:</label>
+                <input id="brand" type="text" 
+                    formControlName="brand" 
+                    [class.invalid]="itemForm.get('brand')?.errors && itemForm.get('brand')?.touched"
+                >
+            </div>
+
+            <div class="field-container">
+                <label for="model">Modelo:</label>
+                <input id="model" type="text"
+                    formControlName="model"
+                    [class.invalid]="itemForm.get('model')?.errors && itemForm.get('model')?.touched"
+                >
+            </div>
+
+            <div class="field-container">
+                <label for="year">Ano:</label>
+                <input id="year" type="text"
+                    formControlName="year"
+                    [class.invalid]="itemForm.get('year')?.errors && itemForm.get('year')?.touched"
+                >
+            </div>
+
+            <div class="field-container">
+                <label for="license">Placa:</label>
+                <input id="license" type="text"
+                    formControlName="license"
+                    [class.invalid]="itemForm.get('license')?.errors && itemForm.get('license')?.touched"
+                >
+            </div>
+
+            <div class="btn-container">
+                <button
+                    type="submit"
+                    class="btn btn-green" 
+                >
+                    Adicionar
+                </button>
+                <button class="btn btn-red" routerLink="/home">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
