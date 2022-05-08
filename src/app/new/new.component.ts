@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, NgForm, Validators } from '@angular/forms';
-import { ActivatedRoute, Router } from '@angular/router';
-import { CarroService } from 'src/app/core/services/carro.service';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/shared/models/car';
+import { CarroService } from '../shared/services/carro.service';
 
 export const defaultCar = {
   brand: "",
@@ -58,5 +58,4 @@ export class NewComponent implements OnInit {
       this.showErrorMessage = true;
     }
   }
-
 }

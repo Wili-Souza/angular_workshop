@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { CarroService } from 'src/app/core/services/carro.service';
 import { Car } from 'src/app/shared/models/car';
+import { CarroService } from '../shared/services/carro.service';
 
 @Component({
   selector: 'app-home',

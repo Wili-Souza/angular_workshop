@@ -4,11 +4,11 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NewComponent } from './new/new.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
+import { EditComponent } from './edit/edit.component';
 import { SharedModule } from './shared/shared.module';
-import { HomeComponent } from './pages/home/home.component';
-import { NewComponent } from './pages/new/new.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { EditComponent } from './pages/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -20,9 +20,9 @@ import { EditComponent } from './pages/edit/edit.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
